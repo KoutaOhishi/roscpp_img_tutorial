@@ -52,6 +52,7 @@ int main(int argc, char** argv){
     ros::init(argc, argv, "img_subscriber");
     ROS_INFO("### START [img_subscriber] ###");
 
+    Img_subscriber i;
 
     ros::spin();
 }

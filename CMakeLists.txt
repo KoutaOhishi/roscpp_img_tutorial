@@ -20,6 +20,6 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(img_subscriber src/img_subscriber.cpp)
-target_link_libraries(img_subscriber ${catkin_LIBRARIES} ${OpenCV_LIBS})
+add_executable(img_tutorial src/img_tutorial.cpp)
+target_link_libraries(img_tutorial ${catkin_LIBRARIES} ${OpenCV_LIBS})
 

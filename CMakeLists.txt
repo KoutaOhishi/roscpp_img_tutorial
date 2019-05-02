@@ -22,4 +22,6 @@ include_directories(
 
 add_executable(img_tutorial src/img_tutorial.cpp)
 target_link_libraries(img_tutorial ${catkin_LIBRARIES} ${OpenCV_LIBS})
+add_executable(edge src/edge.cpp)
+target_link_libraries(edge ${catkin_LIBRARIES} ${OpenCV_LIBS})
 

@@ -7,6 +7,8 @@
 #include "opencv2/opencv_modules.hpp"
 #include "image_transport/image_transport.h"
 
+#define OPENCV_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))
+
 class Img_subscriber{
     private:
         ros::NodeHandle nh;
@@ -50,9 +52,12 @@ class Img_subscriber{
 
 int main(int argc, char** argv){
     ros::init(argc, argv, "img_subscriber");
-    ROS_INFO("### START [img_subscriber] ###");
+    //ROS_INFO("### START [img_subscriber] ###");
 
-    Img_subscriber i;
+    //Img_subscriber i;
 
-    ros::spin();
+    std::cout << "version: " << CV_VERSION << std::endl;
+
+
+    //ros::spin();
 }

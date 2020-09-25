@@ -12,17 +12,24 @@ find_package(catkin REQUIRED COMPONENTS
   #darknet_dnn
 )
 
-find_package(OpenCV 3.4.2 REQUIRED)
 catkin_package()
+
+find_package(OpenCV 3.4 REQUIRED 
+   NO_MODULE
+   PATHS /usr/local
+   NO_DEFAULT_PATH
+)
 
 
 include_directories(
-# include
+  include
+  SYSTEM
+  ${OpenCV_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
 
 add_executable(img_tutorial src/img_tutorial.cpp)
-target_link_libraries(img_tutorial ${catkin_LIBRARIES} ${OpenCV_LIBS})
+target_link_libraries(img_tutorial ${OpenCV_LIBRARIES} ${catkin_LIBRARIES})
 #add_executable(edge src/edge.cpp)
 #target_link_libraries(edge ${catkin_LIBRARIES} ${OpenCV_LIBS})
 #add_executable(goturn src/goturn.cpp)

@@ -11,7 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
   std_msgs
-  darknet_dnn
+  #darknet_dnn
 )
 
 find_package(OpenCV 3.4.2 REQUIRED)
